@@ -14,7 +14,9 @@ public class Word {
     private String mMiwokTranslation;
 
     /* Image explanation for the word. */
-    private int mImageExplanation;
+    private int mImageExplanation = NO_IMAGE_PROVIDED;
+
+    private static final int NO_IMAGE_PROVIDED = -1;
 
     /* Constructor
     *
@@ -50,4 +52,8 @@ public class Word {
 
     /* Get the picture explanation of the word */
     public int getImageExplanation() { return mImageExplanation; }
+
+    public boolean hasImage() {
+        return mImageExplanation != NO_IMAGE_PROVIDED;
+    }
 }
